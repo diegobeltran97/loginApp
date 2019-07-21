@@ -1,11 +1,13 @@
 package com.example.loginapp;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -22,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         pagerAdapter.addFragmet(new LoginFragment());
         pagerAdapter.addFragmet(new RegisterFragment());
         viewPager.setAdapter(pagerAdapter);
+    }
+
+    public void _addHome(View v){
+        Intent _i= new Intent(this, Home.class);
+        startActivity(_i);
     }
 
     class AuthenticationPagerAdapter extends FragmentPagerAdapter {
