@@ -8,41 +8,41 @@
 
     <Button
         android:id="@+id/btnConsultar2"
-        android:layout_width="160dp"
-        android:layout_height="84dp"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="124dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_custom"
         android:fontFamily="@font/roboto_regular"
 
         android:text="MY NOTES"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <Button
         android:id="@+id/btnCrear"
-        android:layout_width="160dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="28dp"
+        android:layout_width="156dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_custom"
-        android:fontFamily="@font/roboto_regular"
 
+        android:fontFamily="@font/roboto_regular"
         android:onClick="_personalNotes"
         android:text="ADD NOTE"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnConsultar2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultar2"
+        app:layout_constraintVertical_bias="0.173" />
 </android.support.constraint.ConstraintLayout>
