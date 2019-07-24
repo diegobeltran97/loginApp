@@ -20,7 +20,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
         @Override
         public void onCreate(SQLiteDatabase db){
-            db.execSQL("CREATE TABLE notas(_id integer primary key autoincrement, titulo varchar(50) unique not null ," +
+            db.execSQL("CREATE TABLE notas(codigo integer primary key, titulo varchar(50) unique not null ," +
                     "ubicacion varchar(50) not null,fecha_inicio varchar(20) not null, fecha_final varchar(20) not null, asistentes int not null)");
         }
 

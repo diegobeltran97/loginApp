@@ -48,7 +48,7 @@ public class personalNotes extends AppCompatActivity {
 
 
             Cursor fila = sql.rawQuery
-                    ("select titulo,ubicacion, fecha_inicio, fecha_final, asistentes from notas where _id=" + cod, null);
+                    ("select titulo,ubicacion, fecha_inicio, fecha_final,asistentes from notas where codigo=" + cod, null);
 
             if(fila.moveToFirst()){
                 titulo.setText(fila.getString(0));
@@ -79,16 +79,19 @@ public class personalNotes extends AppCompatActivity {
         String init= inicio.getText().toString();
         String end= fin.getText().toString();
         String assis= asistente.getText().toString();
+        String cod= codigo.getText().toString();
 
 
-        if(!tit.isEmpty() && !ubic.isEmpty() && !init.isEmpty() && !end.isEmpty() && !assis.isEmpty()){
+        if(!tit.isEmpty() && !ubic.isEmpty() && !cod.isEmpty() && !init.isEmpty() && !end.isEmpty() && !assis.isEmpty()){
             ContentValues registro= new ContentValues();
 
+            registro.put("codigo",cod);
             registro.put("titulo",tit);
             registro.put("ubicacion",ubic);
             registro.put("fecha_inicio",init);
             registro.put("fecha_final",end);
             registro.put("asistentes",assis);
+
 
             sql.insert("notas",null,registro);
 
@@ -98,6 +101,8 @@ public class personalNotes extends AppCompatActivity {
             inicio.setText("");
             fin.setText("");
             asistente.setText("");
+            codigo.setText("");
+
 
             Toast.makeText(this,"Registro exitoso", Toast.LENGTH_SHORT).show();
         }
@@ -115,13 +120,15 @@ public class personalNotes extends AppCompatActivity {
 
 
         if(!cod.isEmpty()){
-            int cantidad = sql.delete("notas","_id=" + cod,null);
+            int cantidad = sql.delete("notas","codigo=" + cod,null);
             sql.close();
             titulo.setText("");
             ubicacion.setText("");
             inicio.setText("");
             fin.setText("");
             asistente.setText("");
+            codigo.setText("");
+
 
             if(cantidad >0){
                 Toast.makeText(this, "Registro eliminado exitosamente", Toast.LENGTH_SHORT).show();
@@ -158,7 +165,7 @@ public class personalNotes extends AppCompatActivity {
             registro.put("fecha_final", end);
             registro.put("asistentes", assis);
 
-            int cantidad = sql.update("notas", registro, "_id=" + cod, null);
+            int cantidad = sql.update("notas", registro, "codigo=" + cod, null);
 
             sql.close();
             titulo.setText("");
@@ -166,6 +173,7 @@ public class personalNotes extends AppCompatActivity {
             inicio.setText("");
             fin.setText("");
             asistente.setText("");
+            codigo.setText("");
 
             if(cantidad == 1){
                 Toast.makeText(this, "Registro modificado correctamente", Toast.LENGTH_SHORT).show();
