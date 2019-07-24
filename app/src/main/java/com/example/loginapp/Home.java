@@ -16,4 +16,8 @@ public class Home extends AppCompatActivity {
         Intent _i= new Intent(this, personalNotes.class);
         startActivity(_i);
     }
+    public void _ListaContactos(View v){
+        Intent _i= new Intent(this, ListaContactos.class);
+        startActivity(_i);
+    }
 }

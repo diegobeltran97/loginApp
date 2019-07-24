@@ -16,6 +16,7 @@
         android:background="@drawable/btn_custom"
         android:fontFamily="@font/roboto_regular"
 
+        android:onClick="_ListaContactos"
         android:text="MY NOTES"
         android:textColor="#FFFFFF"
         android:textSize="15dp"

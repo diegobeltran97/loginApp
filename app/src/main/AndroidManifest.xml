@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".personalNotes"></activity>
+        <activity
+            android:name=".ListaContactos"
+            android:label="@string/title_activity_lista_contactos"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".personalNotes" />
         <activity android:name=".Home" />
         <activity
             android:name=".MainActivity"
