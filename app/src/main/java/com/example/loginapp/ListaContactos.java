@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 import com.example.loginapp.APPSQLiteOpenHelper;
@@ -21,7 +22,7 @@ import java.util.HashMap;
 public class ListaContactos extends AppCompatActivity {
 
     private EditText titulo, ubicacion,inicio,fin,asistente,codigo;
-
+    private ListView lvNotas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class ListaContactos extends AppCompatActivity {
         fin= (EditText)findViewById(R.id.txtFin);
         asistente= (EditText)findViewById(R.id.txtAsist);
         codigo= (EditText)findViewById(R.id.txtcodigo);
+        lvNotas = this.findViewById(R.id.lvNotas);
 
         getAllData();
     }
@@ -57,10 +59,10 @@ public class ListaContactos extends AppCompatActivity {
                         notas.put("fecha_final",fila.getString(3));
                         notas.put("asistentes",fila.getString(4));
                         userList.add(notas);
-//                        ListAdapter adapter = new SimpleAdapter(this, userList, R.layout.list_row,
-//                                new String[]{"nombre","telefono","correo"},
-//                                new int[]{R.id.nombre, R.id.telefono, R.id.correo});
-//                        listContactos.setAdapter(adapter);
+                        ListAdapter adapter = new SimpleAdapter(this, userList, R.layout.list_row,
+                                new String[]{"titulo","ubicacion","fecha_inicio","fecha_fin","asistentes"},
+                                new int[]{R.id.titulo, R.id.ubicacion, R.id.fecha_inicio, R.id.fecha_fin, R.id.asistentes});
+                        lvNotas.setAdapter(adapter);
                     } while (fila.moveToNext());
                 }
             }else {
