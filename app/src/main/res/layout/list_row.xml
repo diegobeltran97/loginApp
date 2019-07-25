@@ -7,27 +7,37 @@
     android:padding="5dip">
 
     <TextView
-        android:id="@+id/nombre"
-        android:layout_width="wrap_content"
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="17dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/telefono"
-        android:layout_width="wrap_content"
+        android:id="@+id/ubicacion"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nombre"
-        android:layout_marginTop="7dp"
-        android:textColor="#343434"
-        android:textSize="14dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titulo" />
 
     <TextView
-        android:id="@+id/correo"
+        android:id="@+id/fecha_inicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ubicacion" />
+
+    <TextView
+        android:id="@+id/fecha_fin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fecha_inicio" />
+    <TextView
+        android:id="@+id/asistentes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/telefono"
-        android:layout_alignBottom="@+id/telefono"
         android:layout_alignParentRight="true"
         android:textColor="#343434"
         android:textSize="14dp" />
