@@ -17,6 +17,11 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_custom"
         android:fontFamily="@font/roboto_regular"
+<<<<<<< HEAD
+
+        android:onClick="_ListaContactos"
+=======
+>>>>>>> 8d7af83144c2ed7029af877e6c33b4f28ef39476
         android:text="MY NOTES"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
