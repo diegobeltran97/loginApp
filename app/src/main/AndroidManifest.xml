@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ListaContactos"
-            android:label="@string/title_activity_lista_contactos"
+            android:label="Tus Notas"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".personalNotes" />
         <activity android:name=".Home" />
