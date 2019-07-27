@@ -11,14 +11,20 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
 
+<<<<<<< HEAD
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
 
+=======
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+>>>>>>> 401f0c4d3aaae5b42e0637d53e18a5d2aff5b1ea
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_custom"
         android:fontFamily="@font/roboto_regular"
         android:onClick="_ListaContactos"
+<<<<<<< HEAD
         android:text="My Notes"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
@@ -34,18 +40,16 @@
         android:text="MY NOTES"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
+=======
+        android:text="VIEW NOTES"
+        android:textColor="#F9F9F9"
+>>>>>>> 401f0c4d3aaae5b42e0637d53e18a5d2aff5b1ea
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrear"
-        app:layout_constraintVertical_bias="0.357" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrear" />
 
-
-    app:layout_constraintVertical_bias="0.534" />
-    =======
-    app:layout_constraintVertical_bias="0.321" />
-    >>>>>>> 90c4ec2ff3a40adab39b39ab38f5a641613d884e
 
     <Button
         android:id="@+id/btnCrear"
